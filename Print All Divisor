@@ -1,0 +1,20 @@
+class Solution {
+    public ArrayList<Integer> getDivisors(int n) {
+     ArrayList<Integer> list1=new ArrayList<>();
+
+     for(int i=1;i*i<=n;i++){
+         if(n%i==0){
+            list1.add(i);
+            if (i != n / i){
+             list1.add(n/i);
+
+         }
+       }
+     }
+     Collections.sort(list1);
+     return list1;
+
+
+
+    }
+}
